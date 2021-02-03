@@ -14,3 +14,18 @@
 > - In essence we are Extracting the core functionality into abstractions that are very flexible and can be used for a lot of different use cases from our very specific starting example of a User.
 
 3. **User class specifics**
+
+- private data: UserProps
+  > Object to store info about a particular user
+- get(propName:string): (string | number)
+  > Gets a single piece of info about this user (name/age)
+- set(update: UserProps): void
+  > Changes info about this user
+- on(eventName:string, callback: ()=>{})
+  > Registers an event handler with this object, so other parts of the app know when something changes
+- trigger(eventName:string):void
+  > Triggers an event to tell other parts of the app that something has changed
+- fetch(): Promise
+  > Fetches some data from the server about a particular user
+- save(): Promise
+  > Saves some data about this user to the server
