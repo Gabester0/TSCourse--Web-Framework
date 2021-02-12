@@ -2,6 +2,10 @@ import { User } from './models/User';
 
 const user = new User({name: 'I am not here', age: 3});
 
-const on = user.on('change',()=>{
-    console.log("something was changed")
+console.log(user.get('name'))
+
+user.on('change', ()=> {
+    console.log('User was changed')
 })
+
+user.trigger('change')
