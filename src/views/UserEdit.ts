@@ -1,7 +1,7 @@
 import { View } from './View';
 import { User, UserProps } from '../models/User';
 import { UserForm } from '../views/UserForm';
-import { UserShow, userShow } from '../views/UserShow';
+import { UserShow } from '../views/UserShow';
 
 export class UserEdit extends View<User, UserProps> {
     regionsMap(): {[key:string]: string}{
